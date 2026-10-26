@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Calculator - Fatima International High School</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <header>
+            <div class="school-logo">FIHS</div>
+            <h1>FATIMA INTERNATIONAL HIGH SCHOOL</h1>
+            <p>Student Mathematics Calculator</p>
+            <p class="matric">Matric Number: CSA202541980</p>
+        </header>
+
+        <main class="calculator">
+            <input type="text" id="display" value="0" readonly aria-label="Calculator display">
+
+            <div class="buttons">
+                <button class="clear" onclick="clearDisplay()">AC</button>
+                <button class="operator" onclick="chooseOperator('/')">÷</button>
+                <button class="operator" onclick="chooseOperator('*')">×</button>
+                <button class="operator" onclick="chooseOperator('-')">−</button>
+
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button class="operator" onclick="chooseOperator('+')">+</button>
+
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button class="operator" onclick="appendNumber('.')">.</button>
+
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button class="equal" onclick="calculate()">=</button>
+
+                <button class="zero" onclick="appendNumber('0')">0</button>
+                <button onclick="deleteLast()">DEL</button>
+            </div>
+        </main>
+
+        <button class="logout" onclick="logout()">Logout</button>
+        <p class="footer">© 2026 Fatima International High School</p>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fatima International High School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="school-logo">FIHS</div>
+
+        <h1>FATIMA INTERNATIONAL HIGH SCHOOL</h1>
+
+        <p class="matric">Matric Number: CSA202541980</p>
+
+        <h2>Student Login</h2>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your username"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <p class="footer">
+            © 2026 Fatima International High School
+        </p>
+
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value;
+
+            if (username && password) {
+                window.location.href = "./calculator.html";
+            } else {
+                alert("Please enter your username and password.");
+            }
+        });
+    </script>
+
+</body>
+</html>
